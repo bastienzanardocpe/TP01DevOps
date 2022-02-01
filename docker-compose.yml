@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+
+  postgre:
+    build: ./Postgre
+    networks:
+    - app-network
+
+  backend:
+    build: ./Java
+    networks:
+    - app-network
+    depends_on:
+    - postgre
+
+  httpd:
+    build: ./httpd
+    ports:
+    - "80:80"
+    networks:
+    - app-network
+    depends_on:
+    - postgre
+    - backend
+    
+networks:
+  app-network: 
