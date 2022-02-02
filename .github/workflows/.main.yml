@@ -6,7 +6,7 @@ on:
   pull_request:
 
 env:
-  GITHUB_TOKEN: ${{secrets.GITHUB_TOKENS}}
+  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
 
 jobs:
