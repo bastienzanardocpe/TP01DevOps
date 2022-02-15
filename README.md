@@ -29,7 +29,6 @@ POSTGRES_PASSWORD=pwd
 
 COPY /CreateScheme.sql /docker-entrypoint-initdb.d 
 COPY /InsertData.sql /docker-entrypoint-initdb.d 
-
 ```
 
 ## Persistance
@@ -112,20 +111,18 @@ sudo docker run -d --name backend -p 8080:8080 bastou/java
 
 ## HTTPD
 
-Dockerfile
-
+- Dockerfile
 ```
 FROM httpd:2.4
 COPY public-html/index.html /usr/local/apache2/htdocs/
 ```
 
-Index.html
-
+- Index.html
 ```
 Hello World !
 ```
 
-Commande :
+- Commandes :
 
 ```bash
 sudo docker build -t bastou/httpd .
@@ -339,7 +336,7 @@ jobs:
 
 __________________________
 
-# TP part 03 - Ansible
+# Compte-Rendu TP03
 
 # Intro 
 
